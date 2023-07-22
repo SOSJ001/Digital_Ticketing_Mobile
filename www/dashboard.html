@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Yeseva+One&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/sosSeats.png" type="image/x-icon">
+        <title>SOS SEATS</title>
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/flowbite.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!-- <link rel="stylesheet" href="css/jquery.animatedheadline.css"> -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <script src="js/modernizr.js"></script>
+        <style>
+            /* square-checkbox */
+            .square-checkbox {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #ccc;
+                outline: none;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+            }
+    
+            /* .square-checkbox:checked {
+          background-color: #ccc;
+        } */
+    
+            /* square-checkbox end */
+    
+            /* Social icons */
+            .social-icons li {
+                border: 1px solid gray;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                color: #f3f3f3;
+                margin: 10px;
+            }
+    
+            /* social icons end */
+    
+            /* scroll bar style */
+            *::-webkit-scrollbar {
+                width: 4px;
+                background-color: #f5f5f5;
+            }
+    
+            *::-webkit-scrollbar-thumb {
+                background-color: #ffc107;
+            }
+    
+            *::-webkit-scrollbar-track {
+                -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+                background-color: #F5F5F5;
+            }
+    
+            /* scroll bar ends */
+    
+            /* parallax background */
+            .parallax {
+                height: 100%;
+                background-image: url('https://source.unsplash.com/random/800x600/?yellow,happy,smiles');
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                /* z-index: 40; */
+            }
+    
+            /* parallax background ends */
+    
+            /* from the style css */
+    
+            .model-dialog {
+                overflow-y: initial;
+            }
+    
+    
+            .model-body {
+                overflow-y: auto;
+            }
+    
+            #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+          }
+    
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+    
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+    
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+    
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+    
+            /* from the style css end */
+    
+    
+            /* owl carousel */
+            .owl-prev {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+            }
+    
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+    
+            .owl-carousel {
+                position: relative;
+            }
+    
+            .owl-carousel .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+                /* width: auto; */
+            }
+    
+            .owl-carousel .item div img {
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+                margin: auto;
+            }
+    
+            .owl-carousel .background {
+                height: 400px;
+                background: #212529;
+            }
+    
+            .owl-carousel .background span {
+                display: block;
+            }
+    
+            /* owl carousel end */
+    
+    
+            /* title theme */
+            .title {
+                font-family: 'Alkatra', cursive;
+            }
+    
+            /* title theme */
+    
+            /* Search div start */
+            #searchForm {
+                margin-top: -150px;
+                position: relative;
+            }
+    
+            /* srarch div end */
+    
+    
+            /* banner */
+    
+            .content span {
+                text-transform: uppercase;
+            }
+    
+            .fallback-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .banner {
+                position: relative;
+                height: 100vh;
+                background-color: black;
+                color: white;
+                overflow: hidden;
+            }
+    
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                z-index: 1;
+                font-family: 'Alkatra', cursive;
+                width: 80%;
+            }
+    
+            #upperContent {
+                font-size: 40px;
+            }
+    
+            #pTag {
+                font-size: 20px;
+            }
+    
+            button {
+                font-size: 24px;
+                padding: 16px;
+                background-color: white;
+                color: black;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                margin: 5px;
+            }
+    
+            .banner .video-container {
+                opacity: .3;
+            }
+    
+            /* banner  end */
+    
+            .index {
+                overflow: auto;
+                height: 100%;
+            }
+    
+            body {
+                overflow-y: auto;
+                overflow-x: hidden;
+                font-family: 'Roboto', sans-serif;
+                font-size: large;
+                color: black;
+            }
+    
+            /* side nav */
+            #sidenav {
+                transition: 0.5s;
+    
+            }
+    
+            .sidenav {
+                height: 100%;
+                width: 200px;
+                position: fixed;
+                z-index: 9;
+                top: 0;
+                left: 0;
+                overflow-x: hidden;
+                padding-top: 70px;
+                color: #0dcaf0;
+                transition: 0.5s;
+            }
+    
+            .sidenav a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-decoration: none;
+                font-size: 18px;
+                display: block;
+                padding-left: 10px;
+                color: white;
+            }
+    
+            .sidenav a:hover {
+                color: #212529;
+                background-color: #198754;
+            }
+    
+            .sidenav a span {
+                display: block;
+            }
+    
+            #logo-sidebar {
+                padding-top: 110px;
+            }
+        </style>
+    </head>
+<body class="index">
+    <div class="blur disable" id="remove">
+        
+    
+        <nav class="w-full fs-4 py-3 sticky-top z-70 bg-dark text-light border-bottom border-color-light">
+            <!-- topnavbar start -->
+            <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
+                <a href="#" class="flex justify-start items-center">
+                    <img src="img/sosSeats.png" class="h-20 mr-1" alt="S.O.S SEATS Logo" />
+                </a>
+        
+                <div class="flex items-center justify-end">
+                    <div>
+                        <i class="text-warning fa-solid fa-ticket"></i>
+                        <strong
+                            class="px-3  text-light fs-5 animate__animated animate__bounce animate__delay-2s animate__infinite">
+                            HI GROUP 10
+                        </strong>
+                    </div>
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+                        type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- topnavbar end -->
+        </nav>
+    <div class="container-fluid p-3">
+        
+        <!-- <?php -->
+        <!-- include 'scanTicket.php'; //do not remove this scanticket.php from this position -->
+        <script src="popper/html5-qrcode.min_.js"></script>
+<div class="modal fade modal-lg" id="ScanModal" data-bs-backdrop="static" role="dialog">
+    <!-- Event pop-up -->
+    <div class="top modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light text-dark">
+                <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">SCAN TICKET</h1>
+                <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light overflow-auto">
+                <div class="row gy-3 row-cols-1 row-cols-md-1 row-cols-sm-1">
+                    <div class=" P-3 col col-md-6 col-sm-12">
+                        <!-- <h4>SCAN RESULT</h4> -->
+                        <form action="" id="panda">
+                            <select class="form-select" id="ScanValue" required name="eventId">
+                                <option disabled selected value="">Select Event Name</option>
+                                <option disabled selected value=""> Event 1</option>
+                                <option disabled selected value=""> Event 2</option>
+                                <!-- fetching the event that were created by the user -->
+                                <!-- <?php include_once 'conn.php';
+                                $UserId = $_SESSION['user']['id']; //getting the user id
+                                
+                                $sql = "SELECT * FROM event WHERE UserId = '$UserId'";
+                                $result = mysqli_query($con, $sql); //excuting the query
+                                
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $eId = $row["id"];
+                                    $sqlSeat = "SELECT * FROM seat WHERE eventId = '$eId'";
+                                    $result_sqlSeat = mysqli_query($con, $sqlSeat); //excuting the query
+                                    $count = mysqli_num_rows($result_sqlSeat);
+                                    $row_sqlSeat = mysqli_fetch_assoc($result_sqlSeat);
+                                    echo "<option class='fw-bold text-center' value=" . $row_sqlSeat["eventId"] . ">" . $row["Name"] . "</option>";
+
+                                } ?> -->
+                            </select>
+                            <label for="" class="fs-4" id="qrGuestName"><span>Guest Name:</span></label>
+                            <input id="result" type="text" placeholder="Guest Name Here" readonly
+                                class="mb-3 mt-1 form-control">
+                            <input type="text" hidden id="qrCode" class="my-3 form-control">
+                            <!-- display qr code -->
+                        </form>
+                        <div>
+                            <span class="fs-4">STATUS: </span>
+                            <!-- <span id="name1"></span> -->
+                            <span id="status1"></span>
+                            <!-- <span id="time1"></span> -->
+                        </div>
+                        <div>
+                            <span class="fs-4">SEAT-AREA: </span>
+                            <!-- <span id="name1"></span> -->
+                            <span id="area"></span>
+                            <!-- <span id="time1"></span> -->
+                        </div>
+                    </div>
+
+                    <div class="col col-md-6 col-sm-12 ">
+                        <div style="width:100%;" id="reader"></div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    function onScanSuccess(qrCodeMessage) { // on scan success
+                        //alert the select values
+                        document.getElementById('qrCode').value = qrCodeMessage;
+                        var ScanValue = document.getElementById('ScanValue').value; //event id
+                        var ScanValue1 = document.getElementById('ScanValue'); //event id
+                        //alert(ScanValue+'ScanValue');
+                        // document.forms[0].submit();
+                        //alert(ScanValue)
+                        if (ScanValue == "") {
+                            // if the event is not selected
+                            document.getElementById('status1').innerHTML =
+                                "<p class='animate__animated animate__zoomInDown fs-4 fw-bold text-dark bg-warning p-3 text-center'>Warning <i class='fa-solid fa-triangle-exclamation'></i> <br>Please select an EVENT</i></p>";
+                        } else {
+                            // if the event is selected
+                            $.ajax({
+                                type: "POST",
+                                url: "scanTicketAction.php",
+                                data: {
+                                    qrCodeMessage: qrCodeMessage,
+                                    ScanValue: ScanValue
+                                },
+                                cache: false,
+                                success: function (data) {
+                                    // /document.getElementById('result').value = data;
+                                    //alert(data);
+                                    var name1 = JSON.parse(data).name;
+                                    var status1 = JSON.parse(data).status;
+                                    var time1 = JSON.parse(data).time;
+                                    var SeatArea = JSON.parse(data).SeatArea;
+                                    // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+                                    // checkinh if the guest exists in the database
+                                    if (name1 == null) {
+                                        document.getElementById('qrGuestName').innerHTML =
+                                            "<span>Qr Message Is</span>";
+                                        document.getElementById('result').value = qrCodeMessage;
+                                    } else {
+                                        document.getElementById('result').value = name1;
+                                        document.getElementById('qrGuestName').innerHTML =
+                                            "<span>Guest Name:</span>";
+                                    }
+                                    // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                                    if (status1 == "PAID" && time1 != null) { //if paid and already entered
+                                        document.getElementById('area').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-danger border rounded p-3 text-center'> " +
+                                            SeatArea + "</p>";
+                                        document.getElementById('status1').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-4 text-dark fw-bold bg-danger rounded p-3 text-center'><i>Already Been Used And Verified By</i> " +
+                                            name1 + " <i>At</i> <br>" + time1 +
+                                            " !! <br> <small class='p-1 m-1 text-danger bg-dark'>PLEASE SHOW YOUR PASS TO PROCEED</small></p>";
+                                    } else if (status1 == "PAID" && time1 == null) { //if paid and not entered
+                                        document.getElementById('area').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                            SeatArea + "</p>";
+                                        document.getElementById('status1').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-4 fw-bold text-dark bg-success p-3 text-center'><i class='fa-solid fa-check-double'></i> <br>Already Paid <br> Successfully Verified</p>";
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "insertScanTime.php",
+                                            data: {
+                                                qrCodeMessage: qrCodeMessage
+                                            },
+                                            cache: false,
+                                            success: function (qrCode) {
+                                                // document.getElementById('status1').innerHTML = "<p class='fs-5 text-dark fw-bold bg-success p-3 text-center'>Successfully Verified !!</p>";
+                                                //alert('VERIFIED');
+
+                                            },
+                                            error: function (xhr, status, error) {
+                                                console.error(xhr);
+                                            }
+                                        });
+                                    } else if (status1 == "NOT PAID" && time1 ==
+                                        null) { //if not paid and not entered
+                                        document.getElementById('area').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                            SeatArea + "</p>";
+                                        document.getElementById('status1').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-danger p-3 text-center'>NOT PAID !! <br> <i>Pay Now to Verify Ticket</i> <button class='verifyBtn animate__animated animate__shakeX animate__infinite animate__delay-2s animate__slow btn p-1 m-1 fw-bold fs-4 text-danger bg-dark'>Verify Payment</button></p>";
+                                        // on click on the verify buutton above
+                                        $(document).ready(function () {
+                                            $(document).on('click', '.verifyBtn', function () {
+                                                // alert('verified button clicked');                                            
+                                                $.ajax({
+                                                    url: "verifyScannedTicket.php",
+                                                    type: "POST",
+                                                    data: {
+                                                        qrCodeMessage: qrCodeMessage
+                                                    },
+                                                    success: function (result) {
+                                                        document.getElementById(
+                                                            'area').innerHTML =
+                                                            "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                                            SeatArea + "</p>";
+                                                        document.getElementById(
+                                                            'status1')
+                                                            .innerHTML =
+                                                            "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-success p-3 text-center'>Successfully Verified !!</p>";
+                                                        //alert('successfully Verified'); 
+
+                                                    }
+                                                });
+
+                                            })
+
+                                        })
+                                    } else {
+                                        document.getElementById('status1').innerHTML =
+                                            "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-danger p-3 text-center'><i class='fa-solid fa-xmark'></i><br>ERROR<br><i>GUEST NOT INVITED</i> !!</p>";
+                                    }
+                                    // alert("the name is " + name1 + " he has " + status1 + " Time entered " + time1);
+                                },
+                                error: function (xhr, status, error) {
+                                    console.error(xhr);
+                                }
+                            });
+                        }
+                        ScanValue1.onclick = function () {
+                            var ScanValue = document.getElementById('ScanValue').value; //event id
+                            if (ScanValue != "") {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "scanTicketAction.php",
+                                    data: {
+                                        qrCodeMessage: qrCodeMessage,
+                                        ScanValue: ScanValue
+                                    },
+                                    cache: false,
+                                    success: function (data) {
+                                        ScanValue = ""; //event id
+                                        // /document.getElementById('result').value = data;
+                                        //alert(data);
+                                        var name1 = JSON.parse(data).name;
+                                        var status1 = JSON.parse(data).status;
+                                        var time1 = JSON.parse(data).time;
+                                        // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+                                        // checking if the guest exists in the database
+                                        if (name1 == null) {
+                                            document.getElementById('qrGuestName').innerHTML =
+                                                "<span>Qr Message Is</span>";
+                                            document.getElementById('result').value = qrCodeMessage;
+                                        } else {
+                                            document.getElementById('result').value = name1;
+                                            document.getElementById('qrGuestName').innerHTML =
+                                                "<span>Guest Name:</span>";
+                                        }
+                                        // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                                        if (status1 == "PAID" && time1 !=
+                                            null) { //if paid and already entered
+                                            document.getElementById('area').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                                SeatArea + "</p>";
+                                            document.getElementById('status1').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-4 text-dark fw-bold bg-danger p-3 text-center'><i>Already Been Used And Verified By</i> " +
+                                                name1 + " <i>At</i> <br>" + time1 +
+                                                " !! <br> <small class='p-1 m-1 text-danger bg-dark'>PLEASE SHOW YOUR PASS TO PROCEED</small></p>";
+                                        } else if (status1 == "PAID" && time1 ==
+                                            null) { //if paid and not entered
+                                            document.getElementById('area').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                                SeatArea + "</p>";
+                                            document.getElementById('status1').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-4 fw-bold text-dark bg-success p-3 text-center'><i class='fa-solid fa-check-double'></i> <br>Already Paid <br> Successfully Verified</p>";
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "insertScanTime.php",
+                                                data: {
+                                                    qrCodeMessage: qrCodeMessage
+                                                },
+                                                cache: false,
+                                                success: function (qrCode) {
+                                                    // document.getElementById('status1').innerHTML = "<p class='fs-5 text-dark fw-bold bg-success p-3 text-center'>Successfully Verified !!</p>";
+                                                    //alert('VERIFIED');
+
+                                                },
+                                                error: function (xhr, status, error) {
+                                                    console.error(xhr);
+                                                }
+                                            });
+                                        } else if (status1 == "NOT PAID" && time1 ==
+                                            null) { //if not paid and not entered
+                                            document.getElementById('area').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                                SeatArea + "</p>";
+                                            document.getElementById('status1').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-danger p-3 text-center'>NOT PAID !! <br> <i>Pay Now to Verify Ticket</i> <button class='verifyBtn animate__animated animate__shakeX animate__infinite animate__delay-2s animate__slow btn p-1 m-1 fw-bold fs-4 text-danger bg-dark'>Verify Payment</button></p>";
+                                            // on click on the verify buutton above
+                                            $(document).ready(function () {
+                                                $(document).on('click', '.verifyBtn', function () {
+                                                    // alert('verified button clicked');                                            
+                                                    $.ajax({
+                                                        url: "verifyScannedTicket.php",
+                                                        type: "POST",
+                                                        data: {
+                                                            qrCodeMessage: qrCodeMessage
+                                                        },
+                                                        success: function (result) {
+                                                            document
+                                                                .getElementById(
+                                                                    'area')
+                                                                .innerHTML =
+                                                                "<p class='animate__animated animate__zoomInDown fs-4 text-light fw-bold bg-dark border-success border rounded p-3 text-center'> " +
+                                                                SeatArea +
+                                                                "</p>";
+                                                            document
+                                                                .getElementById(
+                                                                    'status1')
+                                                                .innerHTML =
+                                                                "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-success p-3 text-center'>Successfully Verified !!</p>";
+                                                            //alert('successfully Verified'); 
+
+                                                        }
+                                                    });
+
+                                                })
+
+                                            })
+                                        } else {
+                                            document.getElementById('status1').innerHTML =
+                                                "<p class='animate__animated animate__zoomInDown fs-5 text-dark fw-bold bg-danger p-3 text-center'><i class='fa-solid fa-xmark'></i><br>ERROR<br><i>GUEST NOT INVITED</i> !!</p>";
+                                        }
+                                        // alert("the name is " + name1 + " he has " + status1 + " Time entered " + time1);
+                                    },
+                                    error: function (xhr, status, error) {
+                                        console.error(xhr);
+                                    }
+                                });
+                            }
+                        }
+
+
+
+
+
+
+
+                        // $(document).ready(function () {
+
+                        /*
+                         * 'post_receiver.php' - where you will be passing the form data
+                         * $(this).serialize() - for reading form data quickly
+                         * function(data){... - data includes the response from post_receiver.php
+                         */
+
+                        //     $.ajax({
+                        //         type: 'POST',
+                        //         url: 'scanTicketAction.php',
+                        //         data: $(this).serialize()
+                        //     })
+                        //         .done(function (data) {
+                        //             // demonstrate the response
+                        //             $('#response').html(data);
+                        //         })
+                        //         .fail(function () {
+                        //             // if posting your form failed
+                        //             alert("Posting failed.");
+                        //         });
+                        // });
+
+                        // alert('working');
+                        // var xmlhttp = new XMLHttpRequest();
+                        // xmlhttp.onreadystatechange = function () {
+                        //     if (this.readyState == 4 && this.status == 200) {
+                        //         document.getElementById("txtHint").innerHTML = this.responseText;
+                        //     }
+                        // };
+                        // xmlhttp.open("GET", "gethint.php?q=" + str, true);
+                        // xmlhttp.send();
+
+                    }
+
+                    function onScanError(errorMessage) {
+                        //handle scan error
+                        // alert('Image Cannot be Scanned. Change Image.')
+                    }
+                    var html5QrcodeScanner = new Html5QrcodeScanner(
+                        "reader", {
+                        fps: 10,
+                        qrbox: 250
+                    });
+                    html5QrcodeScanner.render(onScanSuccess, onScanError);
+                </script>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                <!-- <button class="btn btn-dark text-light" data-bs-target="#AddEventModal" data-bs-toggle="modal">ADD EVENT</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- include 'guest.php'; -->
+        <div class="modal fade modal-lg" id="guestModal" role="dialog">
+            <!-- Event pop-up -->
+            <div class="top modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-light text-dark">
+                        <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">GUESTS</h1>
+                        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                            <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                                &times;
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                        <section class="table">
+                            <div class="container-fluid">
+                                <div class="card text-center">
+                                    <div class="card-header align-items-center d-flex">
+        
+                                        <a href="#scanPrepaid.php" data-bs-target="#ScanPrepaidModal" data-bs-toggle="modal"
+                                            title="Scan Paid Tickets..." class="btn btn-dark">
+                                            <i class="fa-solid fa-plus fa-2x"></i>
+                                            <br><i class="fw-bold">Add Prepaid</i>
+                                        </a>
+                                        <h6 class="mx-2">
+                                            SHOW
+                                            <select class="text-center ScanValueE" id="ScanValueE" required name="eventId">
+                                                <option class="text-center" selected value="">All</option>
+                                                <option class="text-center" value="">Event 1</option>
+                                                <option class="text-center"  value="">Event 2</option>
+                                                
+                                            </select>
+                                            GUESTS
+                                        </h6>
+                                    </div>
+                                    <div class="card-body overflow-auto">
+                                        <table
+                                            class=" table table-resopnsive table-bordered fs-6 table-striped justify-content-center ">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Guest Name</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Event Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                
+                                            </tbody>
+                                        </table>
+        
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- include 'scanPrepaid.php'; -->
+        <!-- include 'deleteevent.php'; ?> -->
+        <!-- <?php include 'shareEvent.php'; -->
+        <div class="modal fade border border-warning" id="ShareEventModal" data-bs-backdrop="static" aria-hidden="true"
+    aria-labelledby="ShareEventModal" tabindex="-1">
+    <!-- sign up pop-up -->
+    <div class="top modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light text-dark">
+                <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">SELL TICKET </h1><br>
+                <small class=" m-2 d-block text-muted">Enter Guest Detail</small>
+                <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <!-- sell ticket form -->
+                <!-- <form action="#" method="POST"> -->
+                <div class="container">
+                    <div class="row mb-2">
+                        <span type="text" readonly id="TicketEventName"
+                            class=" bg-dark text-light fs-4 fw-bold text-center form-control col-8"
+                            >LAW IMPROVEMENT</span>
+                    </div>
+                    <!-- sending the event number -->
+                    <input width="10" readonly class=" bg-dark text-dark border-0" id="TicketId" name="number" input>
+                    <!-- <div class="row mb-2">
+                            <label for="" class="form-label col-6">GUEST LAST NAME</label>
+                            <input type="text" class="form-control col-8" placeholder="JOHNSON" name="L_Name" required>
+                        </div> -->
+                    <div class="row mb-2">
+                        <label for="" class="form-label col-12">GUEST NAME <span id="guestName1"></span></label>
+                        <input type="text" class="form-control col-12" placeholder="MICHAEL" id="GuestName"
+                            name="F_Name" required>
+                    </div>
+                    <input width="10" readonly class=" bg-dark text-dark border-0" id="seatId" name="number1" input>
+                    <!-- <div class="row mb-2">
+                            <label for="" class="form-label col-6">GUEST CONTACT</label>
+                            <input type="text" class="form-control col-8" placeholder="(OPTIONAL) 03481224" name="Contact" required>
+                        </div> -->
+                    <!-- <div class="row my-2"> -->
+                    <!-- should show photo uploaded -->
+                    <!-- <label for="formFile" class="form-label">INVITATION-PHOTO</label>
+                            <input class="form-control" type="file" id="formFile" name="image" required>
+                        </div> -->
+                    <div class="row my-3">
+                        <input type="button" class="btn form-control col-4 bg-warning text-dark text-2xl fw-bold GENERATEt"
+                            value="GENERATE TICKET" name="generate">
+                    </div>
+                </div>
+
+                <!-- </form> -->
+            </div>
+            <div class="modal-footer justify-content-center">
+                <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                <!-- <button class="btn btn-dark text-light" title="Go to events" data-bs-target="#EventModal" data-bs-toggle="modal"><i class="fa-solid fa-circle-left fa-2x"></i></button> -->
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- include 'addSeat.php'; -->
+        <div class="modal fade border border-warning" id="AddSeatModal" data-bs-backdrop="static" aria-hidden="true"
+    aria-labelledby="AddSeatModal" tabindex="-1">
+    <!-- sign up pop-up -->
+    <div class="top modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light text-dark">
+                <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">ADD SEAT</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        &times;
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <!-- form -->
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">EVENT NAME</label>
+                            <select class="form-select" required name="eventId">
+                                <option disabled selected value="">Select Event Name</option>
+                                <!-- fetching the event that were created by the user -->
+                                <option disabled value=""> Event 1</option>
+                                <option disabled value=""> Event 2</option>
+
+                            </select>
+                            <!-- <input type="text" class="form-control col-12" placeholder="MICHAEL" name="Name" required> -->
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">SEAT-AREA</label>
+                            <input type="text" class="form-control col-12" placeholder="" name="SeatArea" required>
+                            <small class="text-muted col-12">(e.g. FIRST CLASS / VIP / NORMAL)</small>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">SEAT-DESCRIPTION</label>
+                            <input type="text" class="form-control col-12" placeholder="" name="SeatDesc" required>
+                            <small class="text-muted col-12">(e.g. VERY IMPORTANT PERSONALITY)</small>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">MAX-SEATS</label>
+                            <input type="number" min="1" class="form-control col-12" placeholder="" name="MaxSeat"
+                                required>
+                            <small class="text-muted col-12">(Total Number Of People You Are Expecting)</small>
+                        </div>
+                        <div class="row my-2">
+                            <label for="" class="form-label col-12">TICKET-PRICE</label>
+                            <input type="number" min="0" class="form-control col-12" placeholder="" name="TicketPrice"
+                                required>
+                            <small class="text-muted col-12">(If Not For Sale Enter 0)</small>
+                        </div>
+                        <div class="row my-3">
+                            <input type="submit" class="btn form-control col-4 bg-warning text-2xl text-dark fw-bold"
+                                value="ADD" name="addSeat">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                <button class="btn btn-dark text-light" title="Go to seats" data-bs-target="#SeatModal"
+                    data-bs-toggle="modal"><i class="fa-solid fa-circle-left fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- include 'seat.php'; -->
+        <div class="modal fade modal-lg" id="SeatModal" data-bs-backdrop="static" role="dialog">
+            <!-- Event pop-up -->
+            <div class="top modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-light text-dark">
+                        <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">SEATS</h1>
+                        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                            <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                                &times;
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                        <section class="table">
+                            <div class="container-fluid">
+                                <div class="card text-center">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4>
+                                            <a href="#AddSeatModal.php" data-bs-target="#AddSeatModal" data-bs-toggle="modal"
+                                                title="Add Seat..." class="btn btn-dark">
+                                                <i class="fa-solid fa-plus fa-2x"></i>
+                                            </a>
+                                            LIST OF SEATS
+                                        </h4>
+                                    </div>
+                                    <div class="card-body overflow-auto">
+                                        <table
+                                            class=" table table-resopnsive table-bordered fs-6 table-striped justify-content-center ">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Event Name</th>
+                                                    <th scope="col">Seat Area</th>
+                                                    <th scope="col">Max Seat</th>
+                                                    <th scope="col">Description</th>
+                                                    <th scope="col">Ticket Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+        
+                                                <!-- <?php include 'seatdisplay.php'; ?>
+         -->
+                                            </tbody>
+                                        </table>
+        
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                        <button class="btn btn-dark text-light" data-bs-target="#AddSeatModal" data-bs-toggle="modal">ADD
+                            SEATS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ?> -->
+        <!-- <?php include 'event.php'; ?> -->
+        <div class="modal fade modal-lg" id="EventModal" data-bs-backdrop="static" role="dialog">
+            <!-- Event pop-up -->
+            <div class="top modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-light text-dark">
+                        <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">EVENTS</h1>
+                        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                            <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                                &times;
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body bg-dark text-light">
+                        <section class="table">
+                            <div class="container-fluid">
+                                <div class="card text-center">
+                                    <div class="card-header align-items-center d-flex">
+                                        <h4>
+                                            <a href="#addevent.php" data-bs-target="#AddEventModal" data-bs-toggle="modal"
+                                                title="Add event..." class="btn btn-dark">
+                                                <i class="fa-solid fa-plus fa-2x"></i>
+                                            </a>
+                                            LIST OF EVENTS
+                                        </h4>
+                                    </div>
+                                    <div class="card-body overflow-auto">
+                                        <table
+                                            class=" table table-resopnsive table-bordered fs-6 table-striped justify-content-center ">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th width="60" scope="col">PHOTO</th>
+                                                    <th scope="col">Event Name</th>
+                                                    <th scope="col">DATE</th>
+                                                    <th scope="col">VENUE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+        
+                                                <!-- <?php include 'eventdisplay.php'; ?> -->
+        
+                                            </tbody>
+                                        </table>
+        
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                        <button class="btn btn-dark text-light" data-bs-target="#AddEventModal" data-bs-toggle="modal">ADD
+                            EVENT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <?php include 'editevent.php'; ?> -->
+        <!-- <?php include 'addevent.php'; ?> -->
+        <div class="modal fade border border-warning" id="AddEventModal" data-bs-backdrop="static" aria-hidden="true"
+    aria-labelledby="AddEventModal" tabindex="-1">
+    <!-- sign up pop-up -->
+    <div class="top modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light text-dark">
+                <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">ADD EVENT</h1>
+                <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                    <span style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        &times;
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light">
+                <!-- form -->
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">EVENT NAME</label>
+                            <input type="text" class="form-control col-12" placeholder="MICHAEL" name="Name" required>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">EVENT-DATE</label>
+                            <input type="text" class="form-control col-12" placeholder="JOHNSON" name="Date" required>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">EVENT-VENUE</label>
+                            <input type="text" class="form-control col-12" placeholder="SOSJ001" name="Venue" required>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="" class="form-label col-12">AUDIENCE</label>
+                            <div class="col-12 form-control">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="radio" checked name="Audience"
+                                                value="PRIVATE" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                PRIVATE
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="radio" name="Audience"
+                                                value="PUBLIC" id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                PUBLIC
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-2">
+                            <label for="formFile" class="form-label">FLYER/POSTER</label>
+                            <input
+                                class="form-control border border-gray-300 bg-white py-2 px-4 rounded-lg shadow-sm hover:border-gray-400 focus:outline-none focus:border-blue-500"
+                                type="file" id="formFile" name="image" required>
+                        </div>
+                        <div class="row my-3">
+                            <input type="submit" class="btn form-control col-4 text-dark bg-warning text-2xl fw-bold"
+                                value="ADD" name="add">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <P class="fs-5">Customer satisfaction is our GOAL!</P>
+                <button class="btn btn-dark text-light" title="Go to events" data-bs-target="#EventModal"
+                    data-bs-toggle="modal"><i class="fa-solid fa-circle-left fa-2x"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- <?php include 'sidebar.php'; ?> -->
+        <!-- <nav id="Mysidenav" class="sidenav bg-dark animate__animated animate__delay-2s animate__slideInLeft">
+
+   <a href="index.php" class=" btn border-success  nav-link  fw-semibold"><i
+         class="fa-solid fa-house "></i><span>HOME</span>
+   </a>
+   <a href="#scanTicket.php" class="btn border-success  nav-link  fw-semibold" title="Scan" data-bs-target="#ScanModal"
+      data-bs-toggle="modal"><i class="fa-solid fa-camera-retro"></i>
+      <span>SCAN</span>
+   </a>
+   <a href="#guest.php" class="btn border-success  fw-semibold nav-link" title="See Guests" data-bs-target="#guestModal"
+      data-bs-toggle="modal"><i class="fa-solid fa-users-gear"></i>
+      <span>GUESTS</span>
+   </a>
+
+   <a href="#event.php" class="btn border-success  nav-link  fw-semibold" title="Events" data-bs-target="#EventModal"
+      data-bs-toggle="modal"><i class="fa-solid fa-calendar-days "></i>
+      <span>EVENT</span>
+   </a>
+
+   <a href="#addSeat.php" data-bs-target="#SeatModal" data-bs-toggle="modal"
+      class="btn border-success  nav-link  fw-semibold" title="SEATS"><i
+         class="fa-solid fa-chair"></i><span>SEATS</span>
+   </a>
+   <a href="logout.php" class="btn border-success  nav-link fw-semibold" title="Logout"><i
+         class="fa-solid fa-right-from-bracket "></i><span>LOGOUT</span>
+   </a>
+
+
+</nav> -->
+
+<aside id="logo-sidebar"
+class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-dark sm:translate-x-0"
+aria-label="Sidebar">
+<div class="h-full bg-dark px-3 pb-4 overflow-y-auto text-light dark:bg-gray-800">
+   <ul class="space-y-2 font-medium">
+      <li>
+         <a href="index.html" class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-house "></i>
+            <span class="ml-3">Home</span>
+         </a>
+      </li>
+      <li>
+         <a href="#scanTicket.php" title="Scan" data-bs-target="#ScanModal" data-bs-toggle="modal"
+            class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-camera-retro"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Scan</span>
+         </a>
+      </li>
+      <li>
+         <a href="#guest.php" title="See Guests" data-bs-target="#guestModal" data-bs-toggle="modal"
+            class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-users-gear"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Guests</span>
+         </a>
+      </li>
+      <li>
+         <a href="#event.php" title="Events" data-bs-target="#EventModal" data-bs-toggle="modal"
+            class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-calendar-days "></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Event</span>
+         </a>
+      </li>
+      <li>
+         <a href="#addSeat.php" data-bs-target="#SeatModal" data-bs-toggle="modal" title="SEATS"
+            class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-chair"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Seats</span>
+         </a>
+      </li>
+      <li>
+         <a href="index.html" title="Logout"
+            class="flex items-center p-2 rounded-lg hover:bg-yellow-500 hover:text-white">
+            <i class="fa-solid fa-right-from-bracket "></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Logout</span>
+         </a>
+      </li>
+   </ul>
+</div>
+</aside>
+
+        <div class="sm:ml-64  align-items-center justify-content-center animate__animated animate__zoomIn">
+            <!--Putting the item at the center of the page -->
+            <hr class="text-light m-3 line">
+            <div class="pb-1 mb-2 container rounded bg-secondary bg-opacity-50">
+                <!-- First row -->
+                <div class="row rounded row-col-2 row-col-md-1 has shadow bg-dark text-light p-3 my-3">
+                    <!-- showing Scan and Guest -->
+                    <div class="col col-md-6 col-sm-12 border border-top-0 border-end-0 border-bottom-0 border-warning">
+                        <div class=" d-flex align-items-center">
+                            <!-- <div class="d-flex"> -->
+                            <div class="icon rounded-circle">
+                                <!-- <button class="btn btn-light text-dark"> -->
+                                <a href="#scanTicket.php" data-bs-target="#ScanModal" data-bs-toggle="modal"
+                                    class="link-dark link-dark text-none btn btn-light text-dark m-3">
+                                    <i class="fa-solid fa-camera-retro fa-3x"></i>
+                                    <br><span class="fw-bold">SCAN</span>
+                                </a>
+
+                                <!-- </button> -->
+                            </div>
+                            <div class="m-3">
+                                <!-- description of the ticket -->
+                                <h4>SCAN <br> TICKETS</h4>
+                            </div>
+                            <!-- </div> -->
+                            <div class="fs-1"><i class="fa-solid fa-qrcode"></i></div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 col-sm-12 border border-top-0 border-end-0 border-bottom-0 border-warning">
+                        <div class=" d-flex align-items-center">
+                            <div class="icon rounded-circle">
+                                <!-- <button class="btn btn-light text-dark"> -->
+                                <a href="#guest.php" data-bs-target="#guestModal" data-bs-toggle="modal"
+                                    class="link-dark link-dark text-none btn btn-light text-dark m-3">
+                                    <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+                                    <i class="fa-solid fa-users-gear fa-2x"></i>
+                                    <br><span class="fw-bold">GUESTS</span>
+                                </a>
+
+                                <!-- </button> -->
+                            </div>
+                            <div class="m-3">
+                                <h4>SEE <br> GUESTS</h4>
+                            </div>
+                            <i class="fa-solid fa-users fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="row rounded row-col-2 row-col-md-1 has shadow bg-dark text-light p-3 my-3">
+                    <!-- showing total events and seats -->
+                    <div
+                        class="col col-xl-6 col-lg-6 col-md-6 col-sm-12 border border-warning border-top-0 border-end-0 border-bottom-0">
+                        <div class=" d-flex align-items-center">
+                            <div class="icon rounded-circle">
+                                <!-- <button class="btn btn-light text-dark"> -->
+                                <a href="#event.php" data-bs-target="#EventModal" data-bs-toggle="modal"
+                                    class="link-dark link-dark text-none btn btn-light text-dark m-3">
+                                    <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+                                    <i class="fa-solid fa-calendar-days fa-3x"></i>
+                                    <br><span class="fw-bold">EVENTS</span>
+                                </a>
+                                <!-- </button> -->
+                            </div>
+                            <div class="m-3">
+                                <!-- description of the ticket -->
+                                <h4>TOTAL <br> EVENTS</h4>
+                            </div>
+                            <div class="fs-1"><strong>
+                                    <!-- <?php include 'DashboardDisplayTotalEvent.php'; ?> -->
+                                    5
+                                </strong></div>
+                        </div>
+                    </div>
+                    <div
+                        class="col col-lg-6 col-xl-6 col-md-6 col-sm-12 border border-warning border-top-0 border-end-0 border-bottom-0">
+                        <div class=" d-flex align-items-center">
+                            <div class="icon rounded-circle">
+                                <a href="#addSeat.php" data-bs-target="#SeatModal" data-bs-toggle="modal"
+                                    class="link-dark link-dark text-none btn btn-light text-dark m-3">
+                                    <i class="fa-solid fa-ellipsis-vertical fa-2x"></i>
+                                    <i class="fa-solid fa-chair fa-3x"></i>
+                                    <br><span class="fw-bold">SEATS</span>
+                                </a>
+                            </div>
+                            <div class="m-3">
+                                <h4>TOTAL <br> SEATS</h4>
+                            </div>
+                            <div class="fs-1"><strong>
+                                    <!-- <?php include 'DashboardDisplayTotalSeat.php'; ?> -->
+                                    1000
+                                </strong></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- horizontal line in the page -->
+                <hr class="text-light m-3">
+                <!-- <?php
+                $id = $_SESSION['user']['id']; //assigning user id to variable
+                $sql = "SELECT * FROM event WHERE UserId = '$id'"; //getting event details
+                $resultEvent = mysqli_query($con, $sql);
+                $countEvent = mysqli_num_rows($result);
+                while ($rowEvent = mysqli_fetch_assoc($resultEvent)) {
+                    $event_EventId = $rowEvent["id"];
+                    $sql__seat = "SELECT * FROM seat WHERE eventId = '$event_EventId'"; //getting seat details
+                    $result_seat = mysqli_query($con, $sql__seat); // result
+                    $count_seat = mysqli_num_rows($result_seat); //counting the row
+                    $row_seat = mysqli_fetch_assoc($result_seat); //getting the row
+                
+                    // ##############################################################################
+                
+                    $sql_ticket_Dashboard = "SELECT * FROM ticket WHERE eventId = '$event_EventId'";
+                    $result_ticket_Dashboard = mysqli_query($con, $sql_ticket_Dashboard); //////getting ticket details for display on the dashboad
+                    $count_ticket_Dashboard = mysqli_num_rows($result_ticket_Dashboard);
+                    $row_ticket_Dashboard = mysqli_fetch_assoc($result_ticket_Dashboard); ///////////////up///////////////////////
+                
+                    // #################################################################################
+                    // ##############################################################################
+                
+                    $sql_ticketP_Dashboard = "SELECT * FROM ticket WHERE status = 'PAID' and eventId = '$event_EventId'";
+                    $result_ticketP_Dashboard = mysqli_query($con, $sql_ticketP_Dashboard); //////getting PAIDticket details for display on the dashboad
+                    $count_ticketP_Dashboard = mysqli_num_rows($result_ticketP_Dashboard);
+                    $row_ticketP_Dashboard = mysqli_fetch_assoc($result_ticketP_Dashboard); ///////////////up///////////////////////
+                
+                    // #################################################################################
+                    if ($count_seat < 1) {
+                        // if no seats available for the event
+                        ?> -->
+                        <div title="Add Seat To Sell Ticket"
+                            class="row rounded row-col-2 row-col-md-1 row-col-sm-1 has shadow bg-dark border border-light text-light p-3 my-3">
+                            <!-- sharing tickets row -->
+                            <div
+                                class="col d-flex align-items-center justify-content-between col-md-6 col-sm-12 border-warning border border-top-0 border-end-0 border-bottom-0">
+                                <div class=" d-flex align-items-center">
+                                    <div class="icon rounded-circle">
+                                        <!-- sell button -->
+                                        <button disabled data-id=""
+                                            data-name=""
+                                            data-cmd=""
+                                            class="share1 link-dark text-none btn btn-light text-dark m-3"
+                                            data-bs-target="#ShareEventModal" data-bs-toggle="modal" role="button"><i
+                                                class="fa-solid fa-share-from-square fa-3x"></i>
+                                            <br><span class="fs-6 fw-bold">Sell Ticket</span>
+                                        </button>
+                                    </div>
+                                    <div class="m-3">
+                                        <h4>
+                                            EVENT:
+                                            YOUTH CONFERENCE
+                                        </h4>
+                                        <small class="text-muted fs-6">
+                                            Area : (not set)
+
+                                            <br>Cost : (not set)
+                                        </small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="hidden-sm-down text-muted">Last Sent Ticket:
+                                       0    
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col d-flex align-items-center justify-content-center col-md-6 col-sm-12 border border-warning border-top-0 border-end-0 border-bottom-0">
+                                <div class=" d-flex align-items-center">
+                                    <div class="m-">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-solid fa-chair"></i>Total Seats :
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-solid fa-check-double"></i>Total
+                                            Verified : 0</div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-regular fa-note-sticky"></i>Total
+                                            Remaining :
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <?php
+                    } else {
+                        // if seats is available for the event
+                        ?> -->
+                        <div
+                            class="row rounded row-col-2 row-col-md-1 row-col-sm-1 has shadow bg-dark border border-light text-light p-3 my-3">
+                            <!-- sharing tickets row -->
+                            <div
+                                class="col d-flex align-items-center justify-content-between col-md-6 col-sm-12 border border-warning border-top-0 border-end-0 border-bottom-0">
+                                <div class=" d-flex align-items-center">
+                                    <div class="icon rounded-circle">
+                                        <!-- sell button -->
+                                        <button title="Sell Ticket"
+                                            class="share1 link-dark text-none btn btn-light text-dark m-3"
+                                            data-bs-target="#ShareEventModal" data-bs-toggle="modal" role="button"><i
+                                                class="fa-solid fa-share-from-square fa-3x"></i>
+                                            <br><span class="fs-6 fw-bold">Sell Ticket</span>
+                                        </button>
+                                    </div>
+                                    <div class="m-3">
+                                        <h4>
+                                            EVENT: LAW IMPROVEMENT
+
+                                        </h4>
+                                        <small class="text-muted fs-6">
+                                            Area : VIP
+
+                                            <br>Cost : NLe
+                                            0
+                                        </small>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="hidden-sm-down text-muted">Last Sent Ticket:
+                                        100                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col d-flex align-items-center justify-content-center col-md-6 col-sm-12 border border-warning border-top-0 border-end-0 border-bottom-0">
+                                <div class=" d-flex align-items-center">
+                                    <div class="m-">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-solid fa-chair"></i>Total Seats :
+                                            <!-- ########################################################## -->
+                                            450
+                                        </div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-solid fa-check-double"></i>Total
+                                            Verified :
+                                            22
+                                        </div>
+                                    </div>
+                                    <div class="m-3">
+                                        <div class="hidden-sm-down text-muted"><i class="fa-regular fa-note-sticky"></i>Total
+                                            Remaining :
+                                            350
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+            </div>
+            <footer
+class="nav nav-footer animate__animated animate__zoomIn cointainer-fluid pt-2 nav-expand-lg bg-dark border-top border-gray-600">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <p><a href="#" class="link-light"><strong>SOSJ001_tech</strong></a> &copy; 2023</p>
+    </div>
+    <div class="col">
+      <span class="text-light">Design By <a href="https://www.facebook.com/Sosj001" target="_blank" class="link-light external">MICHAEL
+        S.0.S. JOHNSON</a></span>
+    </div>
+  </div>
+</div>
+</footer>
+        </div>
+
+    </div>
+    </div>
+    <div class="loader text-center flex justify-center items-center h-screen" id="loader">
+        <div role="status">
+            <svg aria-hidden="true" class="inline w-32 h-32 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-yellow-400" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+            </svg>
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery.smooth-scroll.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ht.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/flowbite.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+
+</html>
